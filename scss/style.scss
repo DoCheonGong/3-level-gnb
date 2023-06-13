@@ -1,0 +1,105 @@
+@charset "UTF-8";
+@import "reset";
+
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-color: #7f36f5;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .inner {
+        width: 1180px;
+        margin: 0 auto;
+
+        h1 {
+            .logo {
+                i {
+                    font-size: 30px;
+                    margin-top: 30px;
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    .nav_web {
+        .gnb {
+            display: inline-flex;
+            color: #fff;
+
+            >li {
+                width: 120px;
+                margin: 15px 30px 0;
+                padding: 15px;
+
+                a {
+                    color: #fff;
+                    font: bold 14px "Arial";
+                }
+
+                &:hover {
+                    background-color: #7fb1fc;
+
+                    .sub_menu1 {
+                        display: block;
+                        position: absolute;
+                        margin-top: 15px;
+                        margin-left: -40px;
+                        background-color: #7fb1fc;
+
+                        ul {
+                            display: block;
+                            margin: 10px;
+
+                            li {
+                                width: 150px;
+                                border-bottom: 3px solid #fff;
+                                text-align: left;
+
+                                &:last-child {
+                                    border-bottom: none;
+                                }
+
+                                .fa-angle-right {
+                                    float: right;
+                                    margin-top: 10px;
+                                }
+
+                                a {
+                                    display: inline-block;
+                                    padding: 10px;
+
+                                    &:hover {
+                                        background-color: #110363;
+                                    }
+                                }
+
+                                &.isSub:hover .sub_menu2 {
+                                    display: block;
+                                    position: absolute;
+                                    margin-top: -40px;
+                                    margin-left: 140px;
+                                    background-color: #7fb1fc;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .sub_menu1 {
+                    display: none;
+
+                    .sub_menu2 {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
